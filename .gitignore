@@ -10,8 +10,7 @@ __pycache__/
 .venv
 venv/
 
-# Models (IMPORTANT 🔥)
-models/*.joblib
+
 
 # Data (optional - if large files)
 data/
