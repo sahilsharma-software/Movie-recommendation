@@ -1,0 +1,30 @@
+.streamlit/secrets.toml
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.env
+.venv
+venv/
+
+# Models (IMPORTANT 🔥)
+models/*.joblib
+
+# Data (optional - if large files)
+data/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Streamlit config (optional)
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
