@@ -6,6 +6,17 @@ import requests
 # ------------------ CONFIG ------------------
 
 st.set_page_config(page_title="Movie Recommender", layout="wide")
+##-------------------------------------
+import gdown
+import os
+
+# ensure folder exists
+os.makedirs("models", exist_ok=True)
+
+# download file if not exists
+if not os.path.exists("models/similarity.joblib"):
+    url = "https://drive.google.com/uc?id=1XOXmKa5Epc2drwB7ydp7YQgfjitu2pAe"
+    gdown.download(url, "models/similarity.joblib", quiet=False)
 
 # ------------------ LOAD DATA ------------------
 
