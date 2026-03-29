@@ -1,29 +1,29 @@
-.streamlit/secrets.toml
-# Python
+# ------------------ Python ------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Virtual Environment
+# ------------------ Virtual Environment ------------------
 .env
 .venv
 venv/
 
+# ------------------ Models ------------------
 models/similarity.joblib
 
-# Data (optional - if large files)
+# ------------------ Data ------------------
 data/
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
+# ------------------ Jupyter ------------------
+.ipynb_checkpoints/
 
-# Streamlit config (optional)
-.streamlit/
+# ------------------ Streamlit Secrets ------------------
+.streamlit/secrets.toml
 
-# OS files
+# ------------------ OS Files ------------------
 .DS_Store
 Thumbs.db
 
-# Docker
+# ------------------ Logs ------------------
 *.log
