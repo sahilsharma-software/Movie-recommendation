@@ -1,7 +1,6 @@
 import streamlit as st
 from joblib import load
 from utils.helper import fetch_poster
-import requests
 
 # ------------------ CONFIG ------------------
 
@@ -27,12 +26,6 @@ def load_data():
     return movies, similarity
 
 movies, similarity = load_data()
-#----------------fetch from api---------------
-def fetch_from_api(movie):
-    url = f"http://localhost:8000/recommend/{movie}"
-    response = requests.get(url)
-    return response.json()["movies"]
-
 
 # ------------------ RECOMMEND FUNCTION ------------------
 def recommend(movie):
@@ -73,14 +66,7 @@ movies['title'].values
 # ------------------ BUTTON ------------------
 if st.button("🚀 Recommend"):
     with st.spinner("Finding best movies for you... 🍿"):
-        results = fetch_from_api(selected_movie)
-
-        names = []
-        posters = []
-
-        for item in results:
-            names.append(item['title'])
-            posters.append(fetch_poster(item['movie_id']))
+       names, posters = recommend(selected_movie)
 
     if not names:
         st.error("Movie not found!")
